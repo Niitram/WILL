@@ -14,7 +14,14 @@ function pluck(array, propiedad) {
   // Pista: es una buena oportunidad para usar map.
 
   // Tu código acá:
-
+  const copiaArray = array.map(function (propiedades) {
+    for (const key in propiedades) {
+      if (key === propiedad) {
+        return propiedades[propiedad]
+      }
+    }
+  })
+  return copiaArray
 }
 
 // No modifiques nada debajo de esta linea //
